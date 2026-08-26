@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../Styles/style.css">
+</head>
+<body class="bg-[#FBF9F9] font-serif min-h-screen flex items-center justify-center">
+    <section class="w-full max-w-md flex flex-col items-center">
+        <div class="flex flex-flow flex-col items-center align-middle text-center">
+          <h4 class="text-[#735C00] font-extrabold">FixItLocal</h4>
+          <p>Refined Reliability for Local Services </p>
+        </div>
+        <div>
+            <div class="flex items-center justify-center">
+                    <button id="customerbtn" class="border h-15 w-96 text-center bg-[#735C00] text-white rounded-[5px] p-[5px]">I am a Customer</button>
+    
+                 
+                    <button id="workerbtn" class="border h-15 w-96 text-center bg-[#FBF9F9] text-[#735C00] rounded-[5px] p-[5px]">I am a worker</button>
+                   
+        
+            
+
+                </div>    
+                <div class="bg-white border border-t-0 w-full p-8">
+                    <div class="text-center">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to book and manage your premium</p>
+                    </div>
+                    
+                    <form id="loginForm" class="flex flex-col gap-2">
+                        <label for="A1">EMAIL ADDRESS</label>
+                        <input type="email" id="A1" placeholder="name@example.com" class="bg-[var(--tertiary-color)] p-1 w-72 rounded-[3px]">
+                        <label for="p1">PASSWORD</label>
+                        <input type="password" id="p1" placeholder="••••••••" class="bg-[var(--tertiary-color)] p-1 w-72 rounded-[3px]">
+                          I agree to the <a href="term/policy.html" class="text-[#735C00] underline">Terms Policy</a>
+                          <div class="text-center items-center">
+                        <input type="submit" value="Login" class="bg-[var(--tertiary-color)] border border-none p-1 w-[80px] h-[40px] hover:bg-[var(--secondary-color)] rounded-[3px]">
+                          </div>
+                    </form>
+                </div>
+            
+
+        </div>        
+
+    </section>
+    <script src="../Scripts/login.js"></script>
+
+</body>
+</html>

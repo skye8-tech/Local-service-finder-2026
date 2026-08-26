@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services page</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+</head>
+<body>
+     <!--Header of the page-->
+  <header id="header"></header>
+  <main>
+    <section class="professionals">
+        <div class="professsionals-search">
+          <form>
+            <h3>Refine Search</h3>
+            <h5>TRADE CATEGORY</h5>
+            <div class="checked-professionals">
+            <div>
+            <input type="checkbox" id="s1">
+            <label for="d1">Plumbing</label>
+            </div>
+            <div>
+            <input type="checkbox" id="s2">
+            <label for="s2">Electrical</label>
+            </div>
+            <div>
+            <input type="checkbox" id="s3">
+            <label for="s3">Capentry</label>
+            </div>
+            </div>
+
+            <h5>PRICE RANGE</h5>
+            <div class="price-professionals">
+                <div>
+            <input type="text" placeholder="FCFA Min">
+                </div>
+                <div>
+            <input type="text" placeholder="FCFA Max">
+                </div>
+            </div>
+
+            <h5>MAXIMUM RATING</h5>
+            <div class="price-rating">
+            <button>4+</button>
+            <button>3+</button>
+            </div>
+             <div class="price-submit">
+            <input type="submit" value="Apply Filters" id="price-filters">
+            </div>
+          </form>
+        </div>
+        <div class="professionals-trade">
+            <div class="professionals-trade-header">
+                <div>
+                  <h1>Trade Professionals</h1>
+                  <p>Showing 24 verified professionals</p>
+                </div>
+                <div>
+                 <select name="" id="">
+                    <option value="" >Sort by Recommended</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="capentry">Capentry</option>
+                 </select>
+                </div>
+
+            </div>
+            <div class="professionals-trade-cards">
+
+            </div>
+
+        </div>
+
+    </section>
+  </main>
+
+    <!--Footer of the page-->
+  <footer id="footer"></footer>
+</body>
+<script src="../Scripts/header-footer.js"></script>
+</html>
