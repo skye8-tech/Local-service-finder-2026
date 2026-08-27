@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="max-w-md mx-auto my-12 px-6 py-8 bg-[#FBF9F9] font-sans text-center"
+    >
+      <div class="flex border-b border-gray-200 mb-8">
+        <button
+          type="button"
+          id="tab-customer"
+          class="w-1/2 py-3 text-sm font-medium border-b-2 bg-white border-[#735C00] text-black focus:outline-none transition-all"
+        >
+          I am a Customer
+        </button>
+        <button
+          type="button"
+          id="tab-worker"
+          class="w-1/2 py-3 text-sm font-medium border-b-2 border-transparent bg-[var(--tertiary-color)] text-[black] hover:text-gray-600 focus:outline-none transition-all"
+        >
+          I am a Worker
+        </button>
+      </div>
+
+      <h2
+        class="font-serif text-3xl text-gray-900 mb-2 font-normal tracking-wide"
+      >
+        Create An Account
+      </h2>
+      <p class="text-sm text-gray-500 mb-8">
+        Sign up to book and manage your premium services.
+      </p>
+
+      <form id="signupForm" class="space-y-5 text-left">
+        <input type="hidden" id="user-role" name="role" value="customer" />
+        <div>
+          <label
+            for="name"
+            class="block text-xs font-semibold text-gray-700 tracking-wider mb-1.5 uppercase"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            class="w-full p-3 text-sm bg-[var(--tertiary-color)] border border-gray-200 rounded focus:outline-none focus:border-gray-400 transition-colors placeholder-gray-400"
+          />
+          <p
+            id="error-name"
+            class="hidden text-xs text-red-500 mt-1 font-medium"
+          ></p>
+        </div>
+
+        <div>
+          <label
+            for="email"
+            class="block text-xs font-semibold text-gray-700 tracking-wider mb-1.5 uppercase"
+            >Email Address</label
+          >
+          <input
+            type="type"
+            id="email"
+            name="email"
+            placeholder="name@example.com"
+            class="w-full p-3 text-sm bg-[var(--tertiary-color)] border border-gray-200 rounded focus:outline-none focus:border-gray-400 transition-colors placeholder-gray-400"
+          />
+          <p
+            id="error-email"
+            class="hidden text-xs text-red-500 mt-1 font-medium"
+          ></p>
+        </div>
+
+        <div>
+          <label
+            for="password"
+            class="block text-xs font-semibold text-gray-700 tracking-wider mb-1.5 uppercase"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            class="w-full p-3 text-sm bg-[var(--tertiary-color)] border border-gray-200 rounded focus:outline-none focus:border-gray-400 transition-colors placeholder-gray-400"
+          />
+          <p
+            id="error-password"
+            class="hidden text-xs text-red-500 mt-1 font-medium"
+          ></p>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2 pt-2">
+            <input
+              type="checkbox"
+              id="terms"
+              name="terms"
+              class="h-4 w-4 rounded bg-[var(--tertiary-color)] text-black focus:ring-black accent-black cursor-pointer"
+            />
+            <label
+              for="terms"
+              class="text-xs text-gray-600 cursor-pointer select-none"
+            >
+              I agree to the Terms & Conditions
+            </label>
+          </div>
+          <p
+            id="error-terms"
+            class="hidden text-xs text-red-500 mt-1 font-medium"
+          ></p>
+        </div>
+        <button
+          type="submit"
+          class="w-full mt-4 p-3 bg-[var(--tertiary-color)] font-medium rounded text-sm hover:bg-gray-800 hover:text-white transition-colors focus:outline-none"
+        >
+          Sign Up
+        </button>
+      </form>
+
+      <p class="text-xs text-gray-500 mt-6">
+        Already have an account?
+        <a
+          href="login.html"
+          class="text-black font-semibold underline ml-1 hover:text-gray-700"
+          >Log In</a
+        >
+      </p>
+    </div>
+    <script src="../Scripts/signup.js"></script>
+  </body>
+</html>
