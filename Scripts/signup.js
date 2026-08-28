@@ -25,15 +25,12 @@ function setRole(role) {
 
 tabCustomer.addEventListener("click", () => setRole("customer"));
 tabWorker.addEventListener("click", () => setRole("worker"));
-// --- Clear and Unified Submit & Validation Handler ---
 signupForm.addEventListener("submit", (e) => {
-  // 1. Stop the page from reloading or navigating automatically
   e.preventDefault();
 
   let isValid = true;
-  const currentRole = roleInput.value; // FIX: Grabs the string value, not the element
+  const currentRole = roleInput.value;
 
-  // 2. Full Name Validation
   const nameValue = nameInput.value.trim();
   if (nameValue === "") {
     showError(nameInput, "error-name", "Please enter your full name.");
@@ -49,7 +46,6 @@ signupForm.addEventListener("submit", (e) => {
     clearError(nameInput, "error-name");
   }
 
-  // 3. Email Validation
   const emailValue = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (emailValue === "") {
@@ -62,7 +58,6 @@ signupForm.addEventListener("submit", (e) => {
     clearError(emailInput, "error-email");
   }
 
-  // 4. Password Strength Validation
   const passwordValue = passwordInput.value;
   if (passwordValue === "") {
     showError(passwordInput, "error-password", "Password is required.");
@@ -85,7 +80,6 @@ signupForm.addEventListener("submit", (e) => {
     clearError(passwordInput, "error-password");
   }
 
-  // 5. Terms & Conditions Validation
   if (!termsCheckbox.checked) {
     showError(
       termsCheckbox,
@@ -97,7 +91,6 @@ signupForm.addEventListener("submit", (e) => {
     clearError(termsCheckbox, "error-terms");
   }
 
-  // 6. Conditional Routing (Only triggers if EVERY check above passes)
   if (isValid) {
     console.log(`Successful validation for role: ${currentRole}`);
 
@@ -109,7 +102,6 @@ signupForm.addEventListener("submit", (e) => {
   }
 });
 
-// --- Helper UI Utilities ---
 function showError(inputElement, errorElementId, message) {
   const errorElement = document.getElementById(errorElementId);
   if (!errorElement) return;
@@ -136,7 +128,6 @@ function clearError(inputElement, errorElementId) {
   }
 }
 
-// --- Live Input Clearing Event Listeners for clean UX ---
 nameInput.addEventListener("input", () => clearError(nameInput, "error-name"));
 emailInput.addEventListener("input", () =>
   clearError(emailInput, "error-email"),

@@ -52,6 +52,10 @@
                 placeholder="name@example.com"
                 class="bg-[var(--tertiary-color)] p-1 w-72 rounded-[3px]"
               />
+              <p
+                id="error-email"
+                class="hidden text-xs text-red-500 mt-1 font-medium text-left w-72"
+              ></p>
             </div>
             <div class="w-72 flex flex-col">
               <label for="p1">PASSWORD</label>
@@ -61,13 +65,21 @@
                 placeholder="••••••••"
                 class="bg-[var(--tertiary-color)] p-1 w-72 rounded-[3px]"
               />
+              <p
+                id="error-password"
+                class="hidden text-xs text-red-500 mt-1 font-medium text-left w-72"
+              ></p>
             </div>
             <div>
-              <input type="checkbox" class="border border-black" />
+              <input type="checkbox" id="terms" class="border border-black" />
               I agree to the
               <a href="term/policy.html" class="text-[#735C00] underline"
                 >Terms Policy</a
               >
+              <p
+                id="error-terms"
+                class="hidden text-xs text-red-500 mt-1 font-medium text-left w-72"
+              ></p>
             </div>
             <div class="text-center items-center">
               <input
