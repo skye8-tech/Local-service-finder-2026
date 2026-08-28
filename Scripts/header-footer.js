@@ -1,5 +1,5 @@
 const header = document.getElementById("header");
-header.innerHTML =`
+header.innerHTML = `
 <div class="logo">FixItLocal</div>
     <div>
         <nav  class="nav-content">
@@ -10,11 +10,11 @@ header.innerHTML =`
         </nav>
     </div>
     <div>
-        <a href="/pages/login.html">Login</a>
+        <a href="/pages/signup.html">Signup</a>
     </div>
 `;
 const footer = document.getElementById("footer");
-footer.innerHTML =`
+footer.innerHTML = `
 <div class="copyright">
      <div class="logo">FixItLocal</div>
      <p>2024 FixItLocal. Refined Reliability for Local <br>

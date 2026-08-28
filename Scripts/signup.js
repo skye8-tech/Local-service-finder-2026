@@ -1,30 +1,11 @@
-const tabCustomer = document.getElementById("tab-customer");
-const tabWorker = document.getElementById("tab-worker");
+const tabCustomer = document.getElementById("customer-checked");
+const tabWorker = document.getElementById("worker-checked");
 const signupForm = document.getElementById("signupForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const termsCheckbox = document.getElementById("terms");
 const roleInput = document.getElementById("user-role");
-
-function setRole(role) {
-  roleInput.value = role;
-
-  if (role === "customer") {
-    tabCustomer.className =
-      "w-1/2 py-3 text-sm font-medium border-b-2 bg-white border-[#735C00] text-black focus:outline-none transition-all";
-    tabWorker.className =
-      "w-1/2 py-3 text-sm font-medium border-b-2 border-transparent bg-[var(--tertiary-color)] text-[black] hover:text-gray-600 focus:outline-none transition-all";
-  } else {
-    tabWorker.className =
-      "w-1/2 py-3 text-sm font-medium border-b-2 bg-white border-[#735C00] text-black focus:outline-none transition-all";
-    tabCustomer.className =
-      "w-1/2 py-3 text-sm font-medium border-b-2 border-transparent bg-[var(--tertiary-color)] text-[black] hover:text-gray-600 focus:outline-none transition-all";
-  }
-}
-
-tabCustomer.addEventListener("click", () => setRole("customer"));
-tabWorker.addEventListener("click", () => setRole("worker"));
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -92,9 +73,7 @@ signupForm.addEventListener("submit", (e) => {
   }
 
   if (isValid) {
-    console.log(`Successful validation for role: ${currentRole}`);
-
-    if (currentRole === "customer") {
+    if (tabCustomer.checked) {
       window.location.href = "dashboards/customer.html";
     } else {
       window.location.href = "dashboards/worker.html";

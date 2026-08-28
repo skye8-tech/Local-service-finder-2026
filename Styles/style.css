@@ -171,6 +171,11 @@ header {
   width: 100%;
   border-radius: 5px;
 }
+.search-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
 .approach {
   align-items: center;
   text-align: center;
@@ -275,6 +280,7 @@ header {
 }
 
 /*Services*/
+
 .professionals {
   background-color: var(--primary-color);
   display: flex;
@@ -283,9 +289,8 @@ header {
   padding-bottom: 100px;
   padding-left: 30px;
   margin-top: 2px;
-  object-fit: contain;
-  overflow: auto;
 }
+
 .professsionals-search {
   background-color: #ffffff;
   padding: 20px;
@@ -304,6 +309,10 @@ header {
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid #735c00;
+}
+.filter-dropdown {
+  border: 1px solid black;
+  padding: 5px;
 }
 .price-rating {
   padding-bottom: 25px;
@@ -334,6 +343,159 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 80%;
+}
+.professionals-trade-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px; /* Clean uniform gap spacing between cards */
+  width: 100%; /* Fill the entire right column area */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.pro-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  height: 580px;
+  position: relative;
+  width: 100%;
+}
+.pro-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pro-details-wrapper {
+  width: 60%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.rating-badge {
+  width: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid #e2e8f0;
+}
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pro-tags {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.pro-desc {
+  line-height: 1.4;
+  margin: 0;
+}
+
+.heart-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.price-box p {
+  margin: 0;
+}
+
+.price-box h4 {
+  margin: 0;
+}
+
+.view-profile-link {
+  font-weight: bolder;
+  color: #475569;
+  text-decoration: underline;
+}
+/* Center alignment wrapper beneath your cards */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page-num,
+.page-btn {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.page-num:hover,
+.page-btn:hover:not(:disabled) {
+  border-color: #94a3b8;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.page-num.active {
+  background-color: #1e293b;
+  border-color: #1e293b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #f1f5f9;
+}
+
+.page-dots {
+  color: #94a3b8;
+  font-size: 14px;
+  padding: 0 4px;
 }
 
 /* For profesionals*/
