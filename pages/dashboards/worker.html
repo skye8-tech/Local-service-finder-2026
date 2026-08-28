@@ -3,10 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard for worker</title>
+    <title>Professionals Page</title>
     <link rel="stylesheet" href="../../Styles/style.css" />
   </head>
   <body>
-    <h2>Welcome to Your Dashboard, Dear Worker</h2>
+    <!--Header of the page-->
+    <header id="header"></header>
+    <main>
+      <div class="worker-header">
+        <div class="worker-description">
+          <div class="worker-image">
+            <img
+              src="../../images/pictures/carpenter1.jpg"
+              alt=""
+              class="workerImg"
+            />
+          </div>
+          <div class="worker-info">
+            <div class="worker-job">
+              <h2 class="worker-name">James Carter</h2>
+              <div class="worker-details">
+                <span class="job">Master Capenter</span>
+                <span class="rating">4.0 (124 Reviews)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile">
+          <p>Profile Visibility</p>
+          <p>Accepting New jobs</p>
+        </div>
+      </div>
+      <div class="earnings">
+        <div class="summary">
+          <div class="summary-header">
+            <div class="summary-title">
+              <h3>Earnings Summary</h3>
+              <p>Your Financial overview for this month</p>
+            </div>
+
+            <div>
+              <a href="">View details</a>
+            </div>
+          </div>
+          <div class="summary-cards">
+            <div class="covers">
+              <h5>THIS MONTH</h5>
+              <span class="monthly-amount">FCFA 70000.00</span>
+            </div>
+            <div class="covers">
+              <h5>PENDING</h5>
+              <span class="pending-amount">FCFA 11000.00</span>
+            </div>
+            <div class="covers">
+              <h5>JOBS COMPLETED</h5>
+              <span class="jobs-completed">18</span>
+            </div>
+          </div>
+        </div>
+        <div class="next-job">
+          <h3>Up Next</h3>
+          <div class="assigments">
+            <div>
+              <img src="../../images/icons/Verify.png" alt="" class="verify" />
+            </div>
+            <div class="assigned-time">
+              <div>Today, 2:00PM</div>
+              <div>Panel Upgrade</div>
+            </div>
+          </div>
+          <button class="assigned-btn">View Job Details</button>
+        </div>
+      </div>
+      <section class="client-reviews">
+        <div class="review-title">
+          <div>
+            <h3>Recent Client Reviews</h3>
+          </div>
+          <div>
+            <a href="">See all reviews</a>
+          </div>
+        </div>
+
+        <div class="review-container">
+          <div class="review-cards">
+            <div class="review-top">
+              <div class="review-profile">
+                <div class="review-profile-img">
+                  <img src="../images/icons/s-profile.png" alt="" />
+                </div>
+                <div class="profile-info">
+                  <h4>Sarah</h4>
+                  <p>Ac installation</p>
+                </div>
+              </div>
+              <div>
+                <img src="../images/icons/stars.png" alt="" />
+              </div>
+            </div>
+            <div class="review-text">
+              <p>
+                "James was incredibly professional and efficient. He upgraded<br />
+                our old wiring and installed new fixtures perfectly. Highly<br />
+                recommend his services for any electrical needs"
+              </p>
+            </div>
+          </div>
+          <div class="review-cards">
+            <div class="review-top">
+              <div class="review-profile">
+                <div class="review-profile-img">
+                  <img src="../images/icons/M-profile.png" alt="" />
+                </div>
+                <div class="profile-info">
+                  <h4>Michael</h4>
+                  <p>Emergency Repair</p>
+                </div>
+              </div>
+              <div>
+                <img src="../images/icons/stars.png" alt="" />
+              </div>
+            </div>
+            <div class="review-text">
+              <p>
+                "Responded quickly to an emergency call on a weekend. Fixed<br />
+                the issue rapidly and explained exactly what went wrong. Very
+                <br />
+                reliable"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer of the page-->
+    <footer id="footer"></footer>
+
+    <script src="../Scripts/header-footer.js"></script>
   </body>
 </html>

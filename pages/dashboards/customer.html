@@ -8,86 +8,167 @@
   </head>
   <body>
     <main>
-      <section>
+      <section class="customer-page">
         <div class="customer-profile">
           <div class="member">
-            <img src="" alt="" />
-            <h3>Eleanor Nsum</h3>
-            <p>Premium Member</p>
-            <button>Edit Profile</button>
+            <div>
+              <img
+                src="../../images/icons/empty-profile.svg"
+                alt=""
+                class="empty-profile"
+              />
+            </div>
+            <div class="member-text">
+              <h3>Eleanor Nsum</h3>
+              <p>Premium Member</p>
+              <button>Edit Profile</button>
+            </div>
           </div>
           <div class="settings">
-            <div>
-              <img src="" alt="" />
-              <p>Overview</p>
+            <div class="side-bar">
+              <div>
+                <img src="../../images/icons/overview.png" alt="" />
+              </div>
+              <div>
+                <p>Overview</p>
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
-              <p>Job Request</p>
+            <div class="side-bar">
+              <div>
+                <img src="../../images/icons/bookings.png" alt="" />
+              </div>
+              <div>
+                <p>Job Request</p>
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
-              <p>Job History</p>
+            <div class="side-bar">
+              <div>
+                <img src="../../images/icons/history.png" alt="" />
+              </div>
+              <div>
+                <p>Job History</p>
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
-              <p>Bookmarked Workers</p>
+            <div class="side-bar">
+              <div>
+                <img src="../../images/icons/saved-wokers.png" alt="" />
+              </div>
+              <div>
+                <p>Bookmarked Workers</p>
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
-              <p>Settings</p>
+            <div class="side-bar">
+              <div>
+                <img src="../../images/icons/settings.png" alt="" />
+              </div>
+              <div>
+                <p>Settings</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="overview">
+          <h1>Welcome back, Eleanor</h1>
+          <p>
+            Here is a refined overview of your active job request and Bookmarked
+            workers
+          </p>
           <div class="overview-top-cards">
-            <h1>Welcome back, Eleanor</h1>
-            <p>
-              Here is a refined overview of your active job request and
-              Bookmarked workers
-            </p>
-
-            <div>
-              <img src="" alt="" />
+            <div class="solar-card">
+              <img src="../../images/pictures/Solar.jpg" alt="" class="solar" />
+              <div class="solar-text">
+                <h3>Solar Panel Installation</h3>
+                <p>With Elias Smith</p>
+                <div>
+                  <span>🕒09:00 AM</span>
+                  <span>Priamry Residence</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img src="" alt="" />
+            <div class="job-container">
+              <div class="job-cards">
+                <div>
+                  <p>
+                    Upcoming <br />
+                    3 Jobs
+                  </p>
+                </div>
+                <div>
+                  <img src="../../images/icons/jobs.png" alt="" />
+                </div>
+              </div>
+              <div class="job-cards">
+                <div>
+                  <h3>Post New Job</h3>
+                  <p>Find Local workers</p>
+                </div>
+                <div>
+                  <img src="../../images/icons/arror.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
           <div class="overview-middle-cards">
-            <h2>Active Job Request</h2>
-            <div>
-              <div>
-              <img src="" alt="">
-              <div>
-                <h5>Fixing of Sink</h5>
-                <p>Nov 12 - 08:30 AM</p>
+            <div class="section-header">
+              <h2>Scheduled Appointments</h2>
+              <a href="#" class="view-all-btn">View All</a>
+            </div>
+
+            <div class="appointments-list">
+              <div class="appointment-card">
+                <div class="appointment-info">
+                  <div class="appointment-icon icon-orange">
+                    <span>📋</span>
+                  </div>
+                  <div class="appointment-details">
+                    <h5>Seasonal Landscaping</h5>
+                    <p>Nov 12 • 10:00 AM • GreenScapes</p>
+                  </div>
                 </div>
-                <div>
-                  <button>Manage</button>
-                </div>
+                <button class="manage-btn">Manage</button>
               </div>
-            </div>
-            <div>
-              <img src="" alt="">
-              <div>
-                <h5>Chair supply</h5>
-                <p>Apr 7 - 08:30 AM</p>
-            </div>
+              <div class="appointment-card">
+                <div class="appointment-info">
+                  <div class="appointment-icon icon-purple">
+                    <span>🛠️</span>
+                  </div>
+                  <div class="appointment-details">
+                    <h5>Interior Painting</h5>
+                    <p>Nov 18 • 08:30 AM • Studio Artis</p>
+                  </div>
+                </div>
+                <button class="manage-btn">Manage</button>
+              </div>
           </div>
           <div class="overview-bottom-cards">
-            <h2>Bookmarked Workers</h2>
-            <div>
-              <div>
-                <img src="" alt="" />
-                <h4>Arthur Ngola</h4>
+            <div class="section-header">
+              <h2>Saved Professionals</h2>
+              <a href="#" class="view-all-btn">Manage List</a>
+            </div>
+
+            <div class="professionals-grid">
+              <div class="pro-card">
+                <img
+                  src="https://placeholder.com"
+                  alt="Arthur Pendleton"
+                  class="pro-avatar"
+                />
+                <h4>Arthur Pendleton</h4>
+                <p class="pro-title">MASTER CARPENTER</p>
+                <p class="pro-rating">⭐ 4.9</p>
               </div>
-              <div>
-                <img src="" alt="" />
-                <h4>Clara Ngwe</h4>
+              <div class="pro-card">
+                <img
+                  src="https://placeholder.com"
+                  alt="Clara Ngwe"
+                  class="pro-avatar"
+                />
+                <h4>Clara Rossi</h4>
+                <p class="pro-title">INTERIOR DESIGNER</p>
+                <p class="pro-rating">⭐ 5.0</p>
               </div>
-              <div>
-                <img src="" alt="" />
+              <div class="pro-card discover-card">
+                <div class="plus-icon">+</div>
                 <p>Discover More</p>
               </div>
             </div>
