@@ -34,7 +34,7 @@ function renderCards() {
                         <p>Starting at</p>
                         <h4>${pro.rate}</h4>
                     </div>
-                    <a href="#" class="view-profile-link">View Profile</a>
+                 <a href="#" class="view-profile-link" data-id="${pro.id}">View Profile</a>
                 </div>
             </div>
         </div>
@@ -79,4 +79,70 @@ pageNumbers.forEach((button) => {
     document.querySelector(".page-num.active")?.classList.remove("active");
     button.classList.add("active");
   });
+});
+// --- MODAL CONTROLLER HANDLER SETUP BLOCK ---
+
+function initProfileModal() {
+  const modal = document.getElementById("profile-modal");
+  const closeBtn = document.getElementById("close-modal-btn");
+  const cardsContainer = document.getElementById("cards-build");
+
+  if (!modal || !cardsContainer) return;
+
+  // 1. Listen for link clicks globally inside the parent cards container area
+  cardsContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("view-profile-link")) {
+      e.preventDefault(); // Stop native link hashtag routing navigation behaviors
+
+      const workerId = parseInt(e.target.getAttribute("data-id"));
+      // Find the item matching the clicked ID inside your global data array list source
+      const workerData = professionalsData.find((p) => p.id === workerId);
+
+      if (workerData) {
+        // Populating element parameters inside the hidden modal content markup blocks
+        document.getElementById("modal-worker-img").src = workerData.image;
+        document.getElementById("modal-worker-name").textContent =
+          workerData.name;
+        document.getElementById("modal-worker-tags").textContent =
+          workerData.tags;
+        document.getElementById("modal-worker-rating").textContent =
+          workerData.rating;
+        document.getElementById("modal-worker-desc").textContent =
+          workerData.description;
+        document.getElementById("modal-worker-rate").textContent =
+          workerData.rate;
+
+        // Remove hidden class properties layout visually to reveal the profile pop-up instantly
+        modal.classList.remove("hidden");
+      }
+    }
+  });
+
+  // 2. Click handler triggers to toggle back visibility parameters when clicking the 'X' button
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // 3. Close the profile screen automatically if clicking into black dark regions outside the window area container block boundaries
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+
+  // 4. Connect transaction click notification triggers
+  const payBtn = document.getElementById("pay-now-btn");
+  if (payBtn) {
+    payBtn.addEventListener("click", () => {
+      alert(
+        `Initiating Mobile Payment transaction sequence for worker profile booking assignment selection!`,
+      );
+    });
+  }
+}
+
+// Ensure you run this initial hook setup inside your main page DOMContentLoaded block function statement
+document.addEventListener("DOMContentLoaded", () => {
+  // Keep your regular card execution runs here...
+  initProfileModal();
 });

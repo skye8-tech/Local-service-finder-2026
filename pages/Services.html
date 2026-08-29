@@ -69,6 +69,47 @@
       </section>
     </main>
 
+    <div id="profile-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <button id="close-modal-btn" class="close-btn">&times;</button>
+
+        <div class="modal-header">
+          <img
+            id="modal-worker-img"
+            src=""
+            alt="Worker Profile"
+            class="modal-avatar"
+          />
+          <div>
+            <h2 id="modal-worker-name">Worker Name</h2>
+            <p id="modal-worker-tags" class="modal-tags">Tags</p>
+            <div class="modal-rating">
+              ⭐ <span id="modal-worker-rating">0.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <h3>About Me</h3>
+          <p id="modal-worker-desc">Worker details will load here...</p>
+
+          <div class="modal-pricing-box">
+            <span>Base Consultation Rate:</span>
+            <strong id="modal-worker-rate">FCFA 0</strong>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <h3>Secure Payment</h3>
+          <p class="payment-note">
+            Complete payment to finalize your booking assignment.
+          </p>
+          <button id="pay-now-btn" class="payment-submit-btn">
+            Pay with Mobile Money / Orange Money
+          </button>
+        </div>
+      </div>
+    </div>
     <!--Footer of the page-->
     <footer id="footer"></footer>
   </body>
