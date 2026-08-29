@@ -1,8 +1,8 @@
 const header = document.getElementById("header");
 header.innerHTML = `
-<div class="logo" class="your-original-header-class flex flex-col md:flex-row justify-between items-center p-4 w-full gap-4 md:gap-0">FixItLocal</div>
+<div class="logo" class="flex flex-col md:flex-row justify-between items-center p-4 w-full gap-4 md:gap-0">FixItLocal</div>
     <div>
-        <nav  class="nav-content" class="your-original-links-class flex flex-wrap justify-center items-center gap-4 text-sm md:text-base w-full md:w-auto">
+        <nav  class="nav-content" class="flex flex-wrap justify-center items-center gap-4 text-sm md:text-base w-full md:w-auto">
             <a href="/index.html">home</a>
             <a href="/pages/Services.html">Find Services</a>
             <a href="/pages/Professionals.html">For Professionals</a>
