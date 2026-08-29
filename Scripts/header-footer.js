@@ -5,7 +5,6 @@ header.innerHTML = `
         <nav  class="nav-content" class="flex flex-wrap justify-center items-center gap-4 text-sm md:text-base w-full md:w-auto">
             <a href="/index.html">home</a>
             <a href="/pages/Services.html">Find Services</a>
-            <a href="/pages/Professionals.html">For Professionals</a>
             <a href="/pages/About.html">About</a>
         </nav>
     </div>

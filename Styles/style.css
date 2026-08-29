@@ -355,12 +355,14 @@ header {
   gap: 80%;
 }
 .professionals-trade-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 20px;
+  width: 100%;
+  justify-content: center;
 }
 
 .pro-card {
@@ -372,7 +374,7 @@ header {
   border-radius: 12px;
   height: 580px;
   position: relative;
-  width: 100%;
+  width: calc(50% -12px);
 }
 .pro-image-wrapper {
   width: 100%;
@@ -1057,5 +1059,115 @@ main {
 
   .payment-submit-btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .customer-page {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .customer-profile {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .member {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .overview-top-cards {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .solar-card {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .professionals-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .appointment-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .manage-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .job-cards {
+    padding: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .worker-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .worker-description {
+    width: 100%;
+  }
+
+  .profile {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .earnings {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .summary,
+  .next-job {
+    width: 100% !important;
+  }
+
+  .summary-cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .covers {
+    width: 100% !important;
+  }
+
+  .assigments {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .assigned-btn {
+    margin-top: 20px;
+  }
+
+  .review-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .review-cards {
+    width: 100%;
+  }
+
+  .review-title {
+    flex-direction: row;
+    align-items: center;
   }
 }
