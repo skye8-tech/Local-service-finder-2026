@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services page</title>
     <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
     <!--Header of the page-->
     <header id="header"></header>
     <main>
-      <section class="professionals">
-        <div class="professsionals-search">
+      <section
+        class="professionals"
+        class="professionals-trade flex flex-col lg:flex-row gap-8 w-[90%] max-w-[1200px] mx-auto py-6"
+      >
+        <div
+          class="professsionals-search"
+          class="refine-search-sidebar w-full lg:w-[300px] shrink-0 bg-gray-50 p-5 rounded-lg border border-gray-100"
+        >
           <form>
             <h3>Refine Search</h3>
             <h5>TRADE CATEGORY</h5>
@@ -58,8 +65,11 @@
               <p>Showing 12 verified professionals</p>
             </div>
           </div>
-          <div class="professionals-trade-cards" id="cards-build"></div>
-          <!-- THE PAGINATION BUTTONS SECTION -->
+          <div
+            class="professionals-trade-cards"
+            id="cards-build"
+            class="categories-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          ></div>
           <div class="pagination">
             <button class="page-num active">1</button>
             <button class="page-num">2</button>

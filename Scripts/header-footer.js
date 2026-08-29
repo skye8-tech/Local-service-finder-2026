@@ -1,15 +1,15 @@
 const header = document.getElementById("header");
 header.innerHTML = `
-<div class="logo">FixItLocal</div>
+<div class="logo" class="your-original-header-class flex flex-col md:flex-row justify-between items-center p-4 w-full gap-4 md:gap-0">FixItLocal</div>
     <div>
-        <nav  class="nav-content">
+        <nav  class="nav-content" class="your-original-links-class flex flex-wrap justify-center items-center gap-4 text-sm md:text-base w-full md:w-auto">
             <a href="/index.html">home</a>
             <a href="/pages/Services.html">Find Services</a>
             <a href="/pages/Professionals.html">For Professionals</a>
             <a href="/pages/About.html">About</a>
         </nav>
     </div>
-    <div>
+    <div  class="flex items-center justify-center gap-3 w-full md:w-auto mt-2 md:mt-0">
         <a href="/pages/signup.html">Signup</a>
     </div>
 `;
