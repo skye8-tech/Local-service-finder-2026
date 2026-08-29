@@ -27,6 +27,16 @@ header {
 .nav-content a {
   color: #4d4635;
 }
+.nav-content a:hover {
+  color: #d4af37;
+}
+
+.Signup a {
+  color: #4d4635;
+}
+.Signup a:hover {
+  color: #d4af37;
+}
 .banner-text {
   width: 100%;
   height: 0 auto;
@@ -762,6 +772,7 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+/* Customer */
 .customer-profile {
   display: flex;
   flex-direction: column;
@@ -913,28 +924,11 @@ main {
   background-color: #f3e8ff;
 }
 
-.appointment-details h5 {
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0 0 4px 0;
-  color: #222222;
-}
-
-.appointment-details p {
-  font-size: 12px;
-  color: #888888;
-  margin: 0;
-}
-
 .manage-btn {
   background-color: transparent;
   border: 1px solid #e0e0e0;
   padding: 6px 14px;
   border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-  color: #555555;
-  transition: background 0.2s;
 }
 
 .manage-btn:hover {
@@ -943,20 +937,20 @@ main {
 
 .professionals-grid {
   display: flex;
-  gap: 16px;
+  gap: 15px;
   width: 100%;
 }
 
 .pro-card {
-  flex: 1;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 12px;
-  padding: 24px 16px;
+  padding: 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
 }
 
 .pro-avatar {
@@ -965,21 +959,6 @@ main {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 12px;
-}
-
-.pro-card h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0 0 4px 0;
-  color: #111111;
-}
-
-.pro-title {
-  font-size: 10px;
-  color: #a0a0a0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 0 0 8px 0;
 }
 
 .pro-rating {
@@ -996,12 +975,6 @@ main {
   background-color: #fafafa;
 }
 
-.discover-card p {
-  font-size: 12px;
-  color: #666666;
-  margin-top: 8px;
-}
-
 .plus-icon {
   width: 32px;
   height: 32px;
@@ -1013,6 +986,76 @@ main {
   color: #666666;
   font-size: 18px;
 }
-* {
-  box-sizing: border-box;
+
+@media (max-width: 992px) {
+  .professionals {
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .professssional-search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .professionals-trade-header {
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .professionals-trade-cards {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .pro-card {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .pro-image-wrapper {
+    width: 100%;
+    height: 220px;
+  }
+
+  .pro-details-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-professionals {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .price-professionals input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 92%;
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-pricing-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .payment-submit-btn {
+    width: 100%;
+  }
 }

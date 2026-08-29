@@ -666,6 +666,11 @@ video {
   height: 40px;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -688,6 +693,10 @@ video {
 
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[92\%\] {
+  width: 92%;
 }
 
 .max-w-md {

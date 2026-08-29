@@ -9,7 +9,7 @@ header.innerHTML = `
             <a href="/pages/About.html">About</a>
         </nav>
     </div>
-    <div  class="flex items-center justify-center gap-3 w-full md:w-auto mt-2 md:mt-0">
+    <div  class="Signup" class="flex items-center justify-center gap-3 w-full md:w-auto mt-2 md:mt-0" >
         <a href="/pages/signup.html">Signup</a>
     </div>
 `;

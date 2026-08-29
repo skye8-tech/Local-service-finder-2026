@@ -73,7 +73,16 @@ signupForm.addEventListener("submit", (e) => {
   }
 
   if (isValid) {
-    if (tabCustomer && tabCustomer.checked) {
+    const selection =
+      tabCustomer && tabCustomer.checked ? "customer" : "worker";
+    const userData = {
+      name: nameValue,
+      email: emailValue,
+      role: selection,
+    };
+    localStorage.setItem("currentUser", JSON.stringify(userData));
+
+    if (selection === "customer") {
       window.location.href = "dashboards/customer.html";
     } else {
       window.location.href = "dashboards/worker.html";
