@@ -1013,3 +1013,129 @@ main {
   color: #666666;
   font-size: 18px;
 }
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES (Add to the very bottom of style.css)
+   ========================================================================== */
+
+/* GLOBAL SAFETY NET: Prevents anything from breaking layout boundaries */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* Stops ugly horizontal screen shaking or shifting */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   1. TABLET BREAKPOINT (Screens 900px wide or smaller)
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  /* Services Page Split: Stacks the 'Refine Search' sidebar directly over the grid cards */
+  .professionals-trade,
+  div[class*="professionals-trade"] {
+    flex-direction: column !important;
+    padding: 15px;
+    gap: 25px;
+  }
+
+  /* Expands the sidebar panel width across the top */
+  .refine-search-sidebar,
+  aside,
+  .professionals-search {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  /* About Page: Stacks the 'Our Story' text block cleanly on top of the worker image */
+  .our-story-section,
+  div[class*="story"] {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 25px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE BREAKPOINT (Screens 768px wide or smaller)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Fluid typography scales titles down cleanly so they don't break lines awkwardly */
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  /* Forces the 4 category cards & approach steps to adjust fluidly */
+  .categories-grid,
+  .approach-steps-container,
+  .standards-grid,
+  .about-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 15px !important;
+  }
+
+  /* Forces the worker card display to wrap dynamically */
+  #cards-build {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+    gap: 20px !important;
+  }
+
+  /* Fixes any fixed-width card sizes from spilling out on small screens */
+  .pro-card,
+  .category-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  /* Stacks Footer links columns layout cleanly on tiny phones */
+  footer,
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    gap: 25px !important;
+    text-align: center !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. SMALL MOBILE BREAKPOINT (Screens 550px wide or smaller)
+   -------------------------------------------------------------------------- */
+@media (max-width: 550px) {
+  /* Home Page Hero: Splits search box elements vertically so it's thumb-friendly */
+  .search-location,
+  form[class*="search"] {
+    flex-direction: column !important;
+    background: transparent !important;
+    border: none !important;
+    gap: 12px;
+    width: 100% !important;
+    padding: 0 10px;
+  }
+
+  /* Stretches the home search text box to fit mobile edges nicely */
+  .search-input {
+    width: 100% !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    font-size: 15px;
+  }
+
+  /* Stretches the brown search trigger button to hit full mobile width */
+  .search-btn,
+  form[class*="search"] button {
+    width: 100% !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    font-size: 16px;
+  }
+}
