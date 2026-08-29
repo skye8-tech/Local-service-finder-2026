@@ -1,4 +1,3 @@
-// Data source: Array of Service Categories
 const servicesData = [
   {
     id: 1,
@@ -47,3 +46,18 @@ function renderServices() {
 }
 
 document.addEventListener("DOMContentLoaded", renderServices);
+document.addEventListener("DOMContentLoaded", () => {
+  const searchForm = document.querySelector(".search-location");
+  const searchInput = document.querySelector(".search-input");
+
+  if (searchForm && searchInput) {
+    searchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+
+      if (query) {
+        window.location.href = `./pages/Services.html?search=${encodeURIComponent(query)}`;
+      }
+    });
+  }
+});

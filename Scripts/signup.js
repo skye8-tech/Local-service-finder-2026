@@ -1,5 +1,5 @@
-const tabCustomer = document.getElementById("customer-checked");
-const tabWorker = document.getElementById("worker-checked");
+const tabCustomer = document.getElementById("customer-check");
+const tabWorker = document.getElementById("worker-check");
 const signupForm = document.getElementById("signupForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -73,7 +73,7 @@ signupForm.addEventListener("submit", (e) => {
   }
 
   if (isValid) {
-    if (tabCustomer.checked) {
+    if (tabCustomer && tabCustomer.checked) {
       window.location.href = "dashboards/customer.html";
     } else {
       window.location.href = "dashboards/worker.html";

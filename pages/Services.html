@@ -24,7 +24,6 @@
                 <option value="" disabled selected hidden>
                   Choose trade...
                 </option>
-                <option value="All">ALL</option>
                 <option value="plumbing">Plumbing</option>
                 <option value="electrical">Electrical</option>
                 <option value="carpentry">Carpentry</option>
@@ -35,10 +34,10 @@
             <h5>PRICE RANGE</h5>
             <div class="price-professionals">
               <div>
-                <input type="text" placeholder="FCFA Min" />
+                <input type="text" placeholder="FCFA Min" id="minprice" />
               </div>
               <div>
-                <input type="text" placeholder="FCFA Max" />
+                <input type="text" placeholder="FCFA Max" id="maxprice" />
               </div>
             </div>
 
@@ -56,7 +55,7 @@
           <div class="professionals-trade-header">
             <div>
               <h1>Trade Professionals</h1>
-              <p>Showing 24 verified professionals</p>
+              <p>Showing 12 verified professionals</p>
             </div>
           </div>
           <div class="professionals-trade-cards" id="cards-build"></div>
@@ -74,5 +73,7 @@
     <footer id="footer"></footer>
   </body>
   <script src="../Scripts/header-footer.js"></script>
+  <script src="../Scripts/service-data.js"></script>
+  <script src="../Scripts/filter.js"></script>
   <script src="../Scripts/service-cards.js"></script>
 </html>

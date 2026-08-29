@@ -1,5 +1,5 @@
-const customerchecked = document.getElementById("customer-check").checked;
-const workerchecked = document.getElementById("worker-check").checked;
+const customerchecked = document.getElementById("customer-check");
+const workerchecked = document.getElementById("worker-check");
 const loginForm = document.getElementById("loginForm");
 const emailInput = document.getElementById("A1");
 const passwordInput = document.getElementById("p1");
@@ -47,9 +47,9 @@ loginForm.addEventListener("submit", (e) => {
   }
 
   if (isValid === true) {
-    if (customerchecked === true) {
+    if (customerchecked.checked) {
       window.location.href = "dashboards/customer.html";
-    } else if (workerchecked === true) {
+    } else {
       window.location.href = "dashboards/worker.html";
     }
   }
